@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+    		<title>MUX IC Simulator</title>
+	</head>
+
+	<body>
+	<div class="container">
+		<ul class="inputs"><center>
+			<li><div class="input-element">
+    				<button class="input-button" id="ib1" onclick="toggleInput('il1','ip1')">On/Off</button>
+    				<div class="led" id="il1"></div>
+    				<div class="input-point" id="ip1" onclick="connect('ip1')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib2" onclick="toggleInput('il2','ip2')">On/Off</button>
+    				<div class="led" id="il2"></div>
+    				<div class="input-point" id="ip2" onclick="connect('ip2')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib3" onclick="toggleInput('il3','ip3')">On/Off</button>
+    				<div class="led" id="il3"></div>
+    				<div class="input-point" id="ip3" onclick="connect('ip3')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib4" onclick="toggleInput('il4','ip4')">On/Off</button>
+    				<div class="led" id="il4"></div>
+    				<div class="input-point" id="ip4" onclick="connect('ip4')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib5" onclick="toggleInput('il5','ip5')">On/Off</button>
+    				<div class="led" id="il5"></div>
+    				<div class="input-point" id="ip5" onclick="connect('ip5')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib6" onclick="toggleInput('il6','ip6')">On/Off</button>
+    				<div class="led" id="il6"></div>
+    				<div class="input-point" id="ip6" onclick="connect('ip6')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib7" onclick="toggleInput('il7','ip7')">On/Off</button>
+    				<div class="led" id="il7"></div>
+    				<div class="input-point" id="ip7" onclick="connect('ip7')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib8" onclick="toggleInput('il8','ip8')">On/Off</button>
+    				<div class="led" id="il8"></div>
+    				<div class="input-point" id="ip8" onclick="connect('ip8')"></div>
+			</div></li>
+
+			<li><div class="input-element">
+    				<button class="input-button" id="ib9" onclick="toggleInput('il9','ip9')">On/Off</button>
+    				<div class="led" id="il9"></div>
+    				<div class="input-point" id="ip9" onclick="connect('ip9')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib10" onclick="toggleInput('il10','ip10')">On/Off</button>
+    				<div class="led" id="il10"></div>
+    				<div class="input-point" id="ip10" onclick="connect('ip10')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib11" onclick="toggleInput('il11','ip11')">On/Off</button>
+    				<div class="led" id="il11"></div>
+    				<div class="input-point" id="ip11" onclick="connect('ip11')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib12" onclick="toggleInput('il12','ip12')">On/Off</button>
+    				<div class="led" id="il12"></div>
+    				<div class="input-point" id="ip12" onclick="connect('ip12')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib13" onclick="toggleInput('il13','ip13')">On/Off</button>
+    				<div class="led" id="il13"></div>
+    				<div class="input-point" id="ip13" onclick="connect('ip13')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib14" onclick="toggleInput('il14','ip14')">On/Off</button>
+    				<div class="led" id="il14"></div>
+    				<div class="input-point" id="ip14" onclick="connect('ip14')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib15" onclick="toggleInput('il15','ip15')">On/Off</button>
+    				<div class="led" id="il15"></div>
+    				<div class="input-point" id="ip15" onclick="connect('ip15')"></div>
+			</div></li>
+			
+			<li><div class="input-element">
+    				<button class="input-button" id="ib16" onclick="toggleInput('il16','ip16')">On/Off</button>
+    				<div class="led" id="il16"></div>
+    				<div class="input-point" id="ip16" onclick="connect('ip16')"></div>
+			</div></li>
+		</center></ul>
+		
+		<div class="workspace">
+			<canvas id="wire-canvas"></canvas>
+			<div class="mux">
+				<div class="pins">
+					<div class="pin" id="p16"><font color="white" size="1">16</font></div>
+    					<div class="pin" id="p15" onclick="connect('p15')"><font color="white" size="1">15</font></div>
+    					<div class="pin" id="p14" onclick="connect('p14')"><font color="white" size="1">14</font></div>
+    					<div class="pin" id="p13" onclick="connect('p13')"><font color="white" size="1">13</font></div>
+    					<div class="pin" id="p12" onclick="connect('p12')"><font color="white" size="1">12</font></div>
+    					<div class="pin" id="p11" onclick="connect('p11')"><font color="white" size="1">11</font></div>
+					<div class="pin" id="p10" onclick="connect('p10')"><font color="white" size="1">10</font></div>
+    					<div class="pin" id="p9" onclick="connect('p9')"><font color="white" size="1">9</font></div>
+				</div>
+				<div class="mux-body"><br><br><br><font color="white"><center>IC-74153</center></div>
+				<div class="pins" >
+					<div class="pin" id="p1" onclick="connect('p1')"><font color="white" size="1">1</font></div>
+    					<div class="pin" id="p2" onclick="connect('p2')"><font color="white" size="1">2</font></div>
+    					<div class="pin" id="p3" onclick="connect('p3')"><font color="white" size="1">3</font></div>
+    					<div class="pin" id="p4" onclick="connect('p4')"><font color="white" size="1">4</font></div>
+    					<div class="pin" id="p5" onclick="connect('p5')"><font color="white" size="1">5</font></div>
+    					<div class="pin" id="p6" onclick="connect('p6')"><font color="white" size="1">6</font></div>
+					<div class="pin" id="p7" onclick="connect('p7')"><font color="white" size="1">7</font></div>
+    					<div class="pin" id="p8"><font color="white" size="1">8</font></div>
+				</div>
+			</div>
+		</div>
+			
+		<ul class="outputs"><center>
+			<li><div class="output-element">
+    				<div class="output-point" id="op1" onclick="connect('op1')" onchange="toggleOutput('op1','ol1')"></div>
+				<div class="led" id="ol1"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op2" onclick="connect('op2')" onchange="toggleOutput('op2','ol2')"></div>
+				<div class="led" id="ol1"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op3" onclick="connect('op3')" onchange="toggleOutput('op3','ol3')"></div>
+				<div class="led" id="ol1"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op4" onclick="connect('op4')" onchange="toggleOutput('op4','ol4')"></div>
+				<div class="led" id="ol4"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op5" onclick="connect('op5')" onchange="toggleOutput('op5','ol5')"></div>
+				<div class="led" id="ol5"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op6" onclick="connect('op6')" onchange="toggleOutput('op6','ol6')"></div>
+				<div class="led" id="ol6"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op7" onclick="connect('op7')" onchange="toggleOutput('op7','ol7')"></div>
+				<div class="led" id="ol7"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op8" onclick="connect('op8')" onchange="toggleOutput('op8','ol8')"></div>
+				<div class="led" id="ol8"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op9" onclick="connect('op9')" onchange="toggleOutput('op9','ol9')"></div>
+				<div class="led" id="ol9"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op10" onclick="connect('op10')" onchange="toggleOutput('op10','ol10')"></div>
+				<div class="led" id="ol10"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op11" onclick="connect('op11')" onchange="toggleOutput('op11','ol11')"></div>
+				<div class="led" id="ol11"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op12" onclick="connect('op12')" onchange="toggleOutput('op12','ol12')"></div>
+				<div class="led" id="ol12"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op13" onclick="connect('op13')" onchange="toggleOutput('op13','ol13')"></div>
+				<div class="led" id="ol13"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op14" onclick="connect('op14')" onchange="toggleOutput('op14','ol14')"></div>
+				<div class="led" id="ol14"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op15" onclick="connect('op15')" onchange="toggleOutput('op15','ol15')"></div>
+				<div class="led" id="ol15"></div>
+			</div></li>
+			<li><div class="output-element">
+    				<div class="output-point" id="op16" onclick="connect('op16')" onchange="toggleOutput('op16','ol16')"></div>
+				<div class="led" id="ol16"></div>
+			</div></li>
+		</center></ul>
+	</div>
+	</body>
+</html>
